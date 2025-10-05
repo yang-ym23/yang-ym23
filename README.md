@@ -83,9 +83,7 @@
 
 <p align="center">
 🕒 上次更新：
-<!--LAST_UPDATED-->
-2024-01-01 00:00
-<!--/LAST_UPDATED-->
+<!--LAST_UPDATED-->2025-10-05 13:42 CST<!--/LAST_UPDATED-->
 UTC+8
 </p>
 
