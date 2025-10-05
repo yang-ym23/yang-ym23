@@ -83,6 +83,10 @@
 
 <p align="center">
 🕒 上次更新：
+<!--LAST_UPDATED-->
+2024-01-01 00:00
+<!--/LAST_UPDATED-->
+UTC+8
 </p>
 
 <p align="center">
