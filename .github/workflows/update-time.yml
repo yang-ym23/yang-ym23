@@ -1,0 +1,20 @@
+name: Update README time
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update time
+        run: |
+          TIME=$(TZ="Asia/Shanghai" date "+%Y年%m月%d日 %H:%M")
+          sed -i "s|🕒 上次更新：.*|🕒 上次更新：${TIME}（北京时间）|" README.md
+      - name: Commit changes
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git commit -am "update time"
+          git push
