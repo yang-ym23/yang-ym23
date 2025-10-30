@@ -52,7 +52,9 @@
 
 ## ⏱ WakaTime Coding Stats
 
-[![WakaTime stats](https://github-readme-stats.vercel.app/api/wakatime?username=yym23&hide=Other&langs_count=8&theme=tokyonight)](https://github-readme-stats.vercel.app/api/wakatime?username=yym23&hide=Other&langs_count=8&theme=tokyonight)
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=yym23&hide=Other&langs_count=8&theme=tokyonight" />
+</p>
 
 ---
 
@@ -73,7 +75,7 @@
 ---
 
 <p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=yang-ym23&theme=tokyonight&hide_border=true" alt="GitHub streak stats" />
+  <img src="https://streak-stats.demolab.com/?user=yang-ym23&theme=tokyonight&hide_border=true" alt="GitHub streak stats" />
 </p>
 
 <p align="center">
