@@ -1,0 +1,34 @@
+name: Update README last-updated
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    if: ${{ github.actor != 'github-actions[bot]' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Update last-updated in README
+        run: |
+          TZ="Asia/Shanghai"
+          NOW=$(TZ="$TZ" date +"%Y-%m-%d %H:%M %Z")
+          echo "New time: $NOW"
+          perl -0777 -pe "s/<!--LAST_UPDATED-->.*?<!--\/LAST_UPDATED-->/<!--LAST_UPDATED-->${NOW}<!--\/LAST_UPDATED-->/s" -i README.md
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "Update README last-updated (auto)" || echo "no changes to commit"
+          git push
